@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sohee's Hidden Gallery</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #0b0d10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    color: #eee;
+  }
+
+  .hotspot {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .reveal {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.98);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 420px;
+    max-width: 90vw;
+    aspect-ratio: 16/10;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  }
+
+  .reveal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hotspot1:hover ~ .reveal1,
+  .hotspot2:hover ~ .reveal2,
+  .hotspot3:hover ~ .reveal3 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .hint {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="hint">Hover over the secret spots 👀</div>
+
+  <div class="hotspot hotspot1" style="top: 20%; left: 25%; width: 200px; height: 150px;"></div>
+  <div class="hotspot hotspot2" style="top: 50%; left: 60%; width: 220px; height: 160px;"></div>
+  <div class="hotspot hotspot3" style="top: 75%; left: 35%; width: 180px; height: 130px;"></div>
+
+  <div class="reveal reveal1" style="top: 25%; left: 25%;">
+    <img src="https://i.imgur.com/1R8x4dF.jpg" alt="Hidden image 1">
+  </div>
+
+  <div class="reveal reveal2" style="top: 55%; left: 60%;">
+    <img src="https://i.imgur.com/1R8x4dF.jpg" alt="Hidden image 2">
+  </div>
+
+  <div class="reveal reveal3" style="top: 75%; left: 35%;">
+    <img src="https://i.imgur.com/1R8x4dF.jpg" alt="Hidden image 3">
+  </div>
+</body>
+</html>
