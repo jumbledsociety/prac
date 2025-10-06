@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STUCK2025</title>
+  <title>S T U C K 2 0 2 5</title>
   <style>
     body {
       margin: 0;
@@ -11,6 +11,15 @@
       background-color: #f4f0eb;
       cursor: crosshair;
       overflow: hidden;
+    }
+
+    /* 페이지에 보이는 제목 스타일 */
+    .page-title {
+      color: #3c787e;  /* 원하는 색상 */
+      text-align: center;
+      font-size: 2.5rem;
+      padding-top: 20px;
+      font-family: Arial, sans-serif;
     }
 
     /* 전체 컨테이너 */
@@ -31,12 +40,13 @@
     /* 이미지 */
     .hotspot img {
       position: absolute;
-      width: 200px;
-      height: 200px;
+      width: 100px;   /* 작게 표시 */
+      height: 100px;
       object-fit: cover;
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
+      border-radius: 10px;
     }
 
     /* 마우스가 영역에 닿았을 때 이미지 표시 */
@@ -46,6 +56,9 @@
   </style>
 </head>
 <body>
+  <!-- 페이지에 보이는 제목 -->
+  <h1 class="page-title">STUCK2025</h1>
+
   <div class="container">
     <!-- 머리 부분 -->
     <div class="hotspot" style="top: 10%; left: 45%;">
