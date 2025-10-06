@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>s t u c k 2 0 2 5</title>
+  <title>S T U C K 2 0 2 5</title>
 
   <!-- Roboto Mono 폰트 불러오기 -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -12,25 +12,27 @@
     body {
       margin: 0;
       height: 100vh;
-      background-color: #0b0d10;
+      background: #0b0d10;
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: 'Roboto Mono', monospace;
       overflow: hidden;
       color: #eee;
-      cursor: crosshair;
     }
 
-    /* 제목 - 좌측 상단 작게 */
+    /* 페이지 제목 스타일 */
     .page-title {
       color: #3c787e;
-      font-size: 1.2rem;
-      letter-spacing: 0.3rem;
+      text-align: center;
+      font-size: 2.5rem;
+      padding-top: 20px;
+      letter-spacing: 0.5rem;  /* 글자 간격 넓히기 */
       font-weight: 700;
       position: absolute;
-      top: 1rem;
-      left: 1.5rem;
+      top: 2%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     /* 전체 컨테이너 */
@@ -57,7 +59,7 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
-      border-radius: 0px;
+      border-radius: 0;   /* 둥근 모서리 제거 */
     }
 
     /* 마우스 오버 시 이미지 표시 */
