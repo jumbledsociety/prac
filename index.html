@@ -142,15 +142,31 @@
     </div>
   </div>
 
-   <script>
-    // 모바일 터치 시 이미지 토글
-    document.querySelectorAll('.hotspot').forEach(h => {
-      h.addEventListener('click', () => {
-        const img = h.querySelector('img');
-        img.style.opacity = img.style.opacity === '1' ? '0' : '1';
-      });
+<script>
+  // PC에서는 hover로, 모바일에서는 터치로 잠깐 표시
+  document.querySelectorAll('.hotspot').forEach(h => {
+    const img = h.querySelector('img');
+
+    // 모바일 터치 시
+    h.addEventListener('touchstart', () => {
+      img.style.transition = 'opacity 0.4s ease'; // 부드럽게
+      img.style.opacity = '1';
+      setTimeout(() => {
+        img.style.opacity = '0';
+      }, 1000); // 1초 동안 표시
     });
-  </script>
+
+    // PC hover 효과도 유지
+    h.addEventListener('mouseenter', () => {
+      img.style.transition = 'opacity 0.3s ease';
+      img.style.opacity = '1';
+    });
+    h.addEventListener('mouseleave', () => {
+      img.style.transition = 'opacity 0.3s ease';
+      img.style.opacity = '0';
+    });
+  });
+</script>
 
 
 </body>
