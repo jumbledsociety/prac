@@ -142,6 +142,16 @@
     </div>
   </div>
 
+   <script>
+    // 모바일 터치 시 이미지 토글
+    document.querySelectorAll('.hotspot').forEach(h => {
+      h.addEventListener('click', () => {
+        const img = h.querySelector('img');
+        img.style.opacity = img.style.opacity === '1' ? '0' : '1';
+      });
+    });
+  </script>
+
 
 </body>
 </html>
