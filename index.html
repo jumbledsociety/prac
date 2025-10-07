@@ -142,5 +142,21 @@
     </div>
   </div>
 
+  <button id="showAllBtn">Show All</button>
+
+<script>
+  const button = document.getElementById('showAllBtn');
+  const images = document.querySelectorAll('.hotspot img');
+  let showingAll = false;
+
+  button.addEventListener('click', () => {
+    showingAll = !showingAll; // 토글 (보였다가 다시 숨기기)
+    images.forEach(img => {
+      img.style.opacity = showingAll ? '1' : '0';
+    });
+    button.textContent = showingAll ? 'Hide All' : 'Show All';
+  });
+</script>
+
 </body>
 </html>
